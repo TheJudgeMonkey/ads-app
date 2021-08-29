@@ -11,3 +11,11 @@ Style/Documentation:
 Rails/FilePath:
   Exclude:
     - config/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+
+Layout/LineLength:
+  Exclude:
+    - config/**/*

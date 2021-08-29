@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 class WelcomeController < ApplicationController
-  def index; end
+  before_action :authenticate_user!
+
+  def index
+    @text = current_user ? 'yessssssssssss' : 'Nooooooooooooooo'
+  end
 end
