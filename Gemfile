@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rubocop', '~> 1.20', require: false
   gem 'rspec-rails', '~> 5.0.0'
   gem 'factory_bot', '~> 6.2.0'
+  gem 'ffaker', '~> 2.19.0'
 end
 
 group :development do
