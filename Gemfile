@@ -32,6 +32,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise', '~> 4.8.0'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap5'
+gem 'rubocop', '~> 1.20.0', require: false
+gem 'rubocop-rails', '~> 2.11.3', require: false
+gem 'rubocop-rspec', '~> 2.4.0', require: false
 gem 'slim-rails', '~> 3.3.0'
 
 group :development, :test do
@@ -41,9 +44,6 @@ group :development, :test do
   gem 'ffaker', '~> 2.19.0'
   gem 'pry', '~> 0.13.1'
   gem 'rspec-rails', '~> 5.0.0'
-  gem 'rubocop', '~> 1.20.0', require: false
-  gem 'rubocop-rails', '~> 2.11.3', require: false
-  gem 'rubocop-rspec', '~> 2.4.0', require: false
 end
 
 group :development do
