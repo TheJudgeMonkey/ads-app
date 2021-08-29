@@ -1,3 +1,7 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
 AllCops:
   NewCops: enable
   Exclude:
@@ -5,3 +9,7 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+Rails/FilePath:
+  Exclude:
+    - config/**/*
