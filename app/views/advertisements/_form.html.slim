@@ -1,0 +1,5 @@
+= simple_form_for advertisement do |f|
+  = f.input :title, input_html: { id: 'title' }, label_html: { for: 'title' }
+  = f.input :description
+  = f.input :draft?, as: :boolean, label: "Save as draft"
+  = f.button :submit, class: "btn btn-primary"
