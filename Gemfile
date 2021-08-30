@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'aasm', '~> 5.2.0'
+gem 'after_commit_everywhere', '~> 1.0'
 gem 'devise', '~> 4.8.0'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap5'
 gem 'rubocop', '~> 1.20.0', require: false
@@ -37,8 +39,6 @@ gem 'rubocop-rails', '~> 2.11.3', require: false
 gem 'rubocop-rspec', '~> 2.4.0', require: false
 gem 'simple_form', '~> 5.1.0'
 gem 'slim-rails', '~> 3.3.0'
-gem 'aasm', '~> 5.2.0'
-gem 'after_commit_everywhere', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
