@@ -2,12 +2,12 @@
   .row 
     - @advertisements.each do |advertisement|
       .col-md-4.mb-3
-        .card[style="width: 18rem;"]
+        .card
           img.card-img-top[src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" alt="picture"]
           .card-body
             h5.card-title
               = advertisement.title
             p.card-text
               = advertisement.description.truncate(100)
-            a.btn.btn-outline-primary[href="#"]
+            a.btn.btn-outline-primary[href="#{advertisement_path(advertisement.id)}"]
               | Read more
