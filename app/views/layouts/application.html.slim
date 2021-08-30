@@ -9,8 +9,9 @@ html
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
-    = yield
+    = render 'layouts/navigation'
+    .container
+      = render 'layouts/messages'
+      = yield
+    = render 'layouts/footer'
+    

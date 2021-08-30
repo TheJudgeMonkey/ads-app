@@ -1,0 +1,27 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
+  .container-fluid
+    a.navbar-brand.fw-bold.mx-3 href="#{root_path}" ADS APP
+    button.navbar-toggler aria-controls="navbarScroll" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarScroll" data-bs-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #navbarScroll.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll style=("--bs-scroll-height: 100px;") 
+      form.d-flex
+        ul.navbar-nav
+          - if current_user.present?
+            li.nav-item.dropdown
+              a#navbarScrollingDropdown.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button" 
+                = current_user.email
+              ul.dropdown-menu.dropdown-menu-end aria-labelledby="navbarScrollingDropdown" 
+                li
+                  a.dropdown-item href="#" Profile
+                li
+                  a.dropdown-item href="#" Add new ad
+                li
+                  hr.dropdown-divider
+                li
+                  = link_to 'Logout', destroy_user_session_path, class: "dropdown-item", method: :delete
+          - else 
+            li.nav-item
+              = link_to 'Login', new_user_session_path, class: "nav-link"
+            li.nav-item
+              = link_to 'Sign up', new_user_registration_path, class: "nav-link"
