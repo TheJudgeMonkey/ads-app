@@ -19,7 +19,7 @@ class AdvertisementsController < ApplicationController
     @advertisement.status = params[:advertisement][:draft] == '1' ? :draft : :pending_review
 
     if @advertisement.save
-      redirect_to advertisement_path(@advertisement.id)
+      redirect_to advertisement_path(@advertisement.id), notice: 'Advertisement was successfully created.'
     else
       render :new
     end
@@ -35,10 +35,15 @@ class AdvertisementsController < ApplicationController
     @advertisement.status = params[:advertisement][:draft] == '1' ? :draft : :pending_review
 
     if @advertisement.update(advertisement_params)
-      redirect_to advertisement_path(@advertisement.id)
+      redirect_to advertisement_path(@advertisement.id), notice: 'Advertisement was successfully updated.'
     else
       render :edit
     end
+  end
+
+  def destroy
+    Advertisement.find(params[:id]).destroy!
+    redirect_to advertisements_path, notice: 'Advertisement was successfully destroyed.'
   end
 
   private

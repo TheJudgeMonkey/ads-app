@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'advertisements#index'
 
-  resources :advertisements, only: %i[index show new create edit update]
+  resources :advertisements
 end

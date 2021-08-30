@@ -13,8 +13,9 @@
         | Updated at: #{@advertisement.updated_at}
     a.btn.btn-outline-primary.me-2[href="#{edit_advertisement_path(@advertisement.id)}"]
       | Edit
-    a.btn.btn-outline-danger.me-2[href="#"]
-      | Archive
+
+    = link_to "Archive", advertisement_path(@advertisement.id), method: :delete, class: "btn btn-outline-danger me-2", data: { confirm: 'Are you sure?' }
+    
     - if current_user.id == 2
       a.btn.btn-outline-success.me-2[href="#"]
         | Approve      
