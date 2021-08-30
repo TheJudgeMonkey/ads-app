@@ -37,6 +37,8 @@ gem 'rubocop-rails', '~> 2.11.3', require: false
 gem 'rubocop-rspec', '~> 2.4.0', require: false
 gem 'simple_form', '~> 5.1.0'
 gem 'slim-rails', '~> 3.3.0'
+gem 'aasm', '~> 5.2.0'
+gem 'after_commit_everywhere', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
