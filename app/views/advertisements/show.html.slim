@@ -5,6 +5,7 @@
       = @advertisement.title
     p.card-text
       p = @advertisement.description
+      p = link_to UserPresenter.new(@advertisement.user).display_name, user_path(@advertisement.user.id)
       p.text-muted
         | Status: #{@advertisement.status.humanize}
       p.text-muted
@@ -16,6 +17,6 @@
 
     = link_to "Archive", advertisement_path(@advertisement.id), method: :delete, class: "btn btn-outline-danger me-2", data: { confirm: 'Are you sure?' }
     
-    - if current_user.id == 2
+    - if current_user&.id == 2
       a.btn.btn-outline-success.me-2[href="#"]
         | Approve      

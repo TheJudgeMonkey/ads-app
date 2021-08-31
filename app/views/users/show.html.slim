@@ -1,0 +1,13 @@
+h1 Profile 
+p 
+  | Email: #{@user.email}
+p 
+  | First name: #{@user.first_name}
+p 
+  | Last name: #{@user.last_name}
+  
+- if @user.id == current_user.id || current_user.id == 2
+  p 
+    = link_to 'Edit', edit_user_path(@user.id), class: 'btn btn-outline-primary'
+
+= render 'advertisements/list', advertisements: @advertisements

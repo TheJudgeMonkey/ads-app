@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'advertisements#index'
 
   resources :advertisements
+  resources :users
 end

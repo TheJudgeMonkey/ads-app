@@ -10,10 +10,10 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
           - if current_user.present?
             li.nav-item.dropdown
               a#navbarScrollingDropdown.nav-link.dropdown-toggle aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button" 
-                = current_user.email
+                = UserPresenter.new(current_user).display_name
               ul.dropdown-menu.dropdown-menu-end aria-labelledby="navbarScrollingDropdown" 
                 li
-                  a.dropdown-item href="#" Profile
+                  a.dropdown-item href="#{user_path(current_user.id)}" Profile
                 li
                   a.dropdown-item href="#{new_advertisement_path}" Create new ad
                 li

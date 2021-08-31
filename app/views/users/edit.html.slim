@@ -1,0 +1,6 @@
+h1 Edit Profile #{@user.email}
+
+= render "form", user: @user
+
+- if current_user.id == @user.id
+  = link_to "Change your password", edit_user_registration_path 

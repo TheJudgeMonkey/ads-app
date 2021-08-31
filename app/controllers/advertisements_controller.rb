@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class AdvertisementsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
     @advertisements = Advertisement.order(updated_at: :desc).page(params[:page]).per(6)
   end
