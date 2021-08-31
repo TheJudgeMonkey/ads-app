@@ -1,4 +1,22 @@
 GIT
+  remote: https://github.com/kaminari/kaminari
+  revision: 73b93405b95615b5ad3f53c3dffe419a59890cad
+  ref: 73b93405b95615b5ad3f53c3dffe419a59890cad
+  specs:
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
+
+GIT
   remote: https://github.com/king601/devise-bootstrapped.git
   revision: 464479797a3fc0ec11e9090b7dc62cc5db955f7d
   branch: bootstrap5
@@ -295,6 +313,7 @@ DEPENDENCIES
   factory_bot (~> 6.2.0)
   ffaker (~> 2.19.0)
   jbuilder (~> 2.7)
+  kaminari!
   listen (~> 3.3)
   pg (~> 1.1)
   pry (~> 0.13.1)

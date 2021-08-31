@@ -2,7 +2,7 @@
 
 class AdvertisementsController < ApplicationController
   def index
-    @advertisements = Advertisement.all
+    @advertisements = Advertisement.order(updated_at: :desc).page(params[:page]).per(6)
   end
 
   def show

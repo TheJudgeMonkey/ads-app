@@ -11,3 +11,6 @@
               = advertisement.description.truncate(100)
             a.btn.btn-outline-primary[href="#{advertisement_path(advertisement.id)}"]
               | Read more
+  .row
+    .col-md-12
+      = paginate @advertisements
