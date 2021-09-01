@@ -13,10 +13,13 @@ class AdvertisementsController < ApplicationController
 
   def new
     @advertisement = current_user.advertisements.new
+    authorize @advertisement
   end
 
   def create
     @advertisement = current_user.advertisements.new(advertisement_params)
+
+    authorize @advertisement
 
     @advertisement.status = params[:advertisement][:draft] == '1' ? :draft : :pending_review
 
@@ -29,10 +32,13 @@ class AdvertisementsController < ApplicationController
 
   def edit
     @advertisement = Advertisement.find(params[:id])
+    authorize @advertisement
   end
 
   def update
-    @advertisement = current_user.advertisements.find(params[:id])
+    @advertisement = Advertisement.find(params[:id])
+
+    authorize @advertisement
 
     @advertisement.status = params[:advertisement][:draft] == '1' ? :draft : :pending_review
 
@@ -44,7 +50,12 @@ class AdvertisementsController < ApplicationController
   end
 
   def destroy
-    Advertisement.find(params[:id]).destroy!
+    advertisement = Advertisement.find(params[:id])
+
+    authorize advertisement
+
+    advertisement.archive!
+
     redirect_to advertisements_path, notice: 'Advertisement was successfully destroyed.'
   end
 
