@@ -34,6 +34,7 @@ gem 'aasm', '~> 5.2.0'
 gem 'after_commit_everywhere', '~> 1.0'
 gem 'devise', '~> 4.8.0'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap5'
+gem 'enumerize', '~> 2.4.0'
 gem 'kaminari', git: 'https://github.com/kaminari/kaminari', ref: '73b93405b95615b5ad3f53c3dffe419a59890cad'
 gem 'rubocop', '~> 1.20.0', require: false
 gem 'rubocop-rails', '~> 2.11.3', require: false

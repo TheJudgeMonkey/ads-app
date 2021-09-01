@@ -117,6 +117,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
+    enumerize (2.4.0)
+      activesupport (>= 3.2)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -310,6 +312,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise (~> 4.8.0)
   devise-bootstrapped!
+  enumerize (~> 2.4.0)
   factory_bot (~> 6.2.0)
   ffaker (~> 2.19.0)
   jbuilder (~> 2.7)
