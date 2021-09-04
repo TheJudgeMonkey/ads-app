@@ -46,6 +46,7 @@ gem 'rubocop-rspec', '~> 2.4.0', require: false
 gem 'sidekiq', '~> 6.2.2', '>= 6.2.2'
 gem 'simple_form', '~> 5.1.0'
 gem 'slim-rails', '~> 3.3.0'
+gem 'whenever', '~> 1.0.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
