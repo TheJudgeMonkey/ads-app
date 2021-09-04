@@ -3,7 +3,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @advertisements = @user.advertisements.order(updated_at: :desc).page(params[:page]).per(6)
+    @advertisements = @user.advertisements.pagination(params[:page])
   end
 
   def edit

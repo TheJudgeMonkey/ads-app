@@ -16,6 +16,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
                   a.dropdown-item href="#{user_path(current_user.id)}" Profile
                 li
                   a.dropdown-item href="#{new_advertisement_path}" Create new ad
+                - if policy(Advertisement).moderate?
+                  li
+                    a.dropdown-item href="#{moderations_advertisements_path}" Ads for moderation
                 li
                   hr.dropdown-divider
                 li

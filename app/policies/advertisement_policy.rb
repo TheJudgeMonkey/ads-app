@@ -17,7 +17,7 @@ class AdvertisementPolicy < ApplicationPolicy
     user.admin? || user == record.user
   end
 
-  def approve?
+  def moderate?
     user.admin?
   end
 end

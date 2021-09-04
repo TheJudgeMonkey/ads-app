@@ -11,6 +11,8 @@ class Advertisement < ApplicationRecord
   validates :description, presence: true
   validates :status, presence: true
 
+  scope :pagination, ->(page) { order(updated_at: :desc).page(page).per(6) }
+
   aasm(:status) do
     state :draft
     state :pending_review
@@ -23,7 +25,7 @@ class Advertisement < ApplicationRecord
       transitions from: :draft, to: :pending_review
     end
 
-    event :aprove do
+    event :approve do
       transitions from: :pending_review, to: :approved
     end
 

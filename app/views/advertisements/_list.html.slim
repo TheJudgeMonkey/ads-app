@@ -11,8 +11,8 @@
               = advertisement.description.truncate(100)
             p.card-text
               = link_to UserPresenter.new(advertisement.user).display_name, user_path(advertisement.user.id)
-            a.btn.btn-outline-primary[href="#{advertisement_path(advertisement.id)}"]
-              | Read more
+            - conditional_advertisement_path = moderation ? moderations_advertisement_path(advertisement.id) : advertisement_path(advertisement.id)
+            = link_to "Read more", conditional_advertisement_path, class: "btn btn-outline-primary"
   .row
     .col-md-12
       = paginate advertisements

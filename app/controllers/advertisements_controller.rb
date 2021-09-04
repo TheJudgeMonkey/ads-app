@@ -4,7 +4,7 @@ class AdvertisementsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @advertisements = Advertisement.order(updated_at: :desc).page(params[:page]).per(6)
+    @advertisements = Advertisement.approved.pagination(params[:page])
   end
 
   def show
