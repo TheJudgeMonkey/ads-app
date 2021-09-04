@@ -19,3 +19,11 @@ Metrics/BlockLength:
 Layout/LineLength:
   Exclude:
     - config/**/*
+
+Metrics/AbcSize:
+  Exclude:
+    - db/**/*
+
+Metrics/MethodLength:
+  Exclude:
+    - db/**/*

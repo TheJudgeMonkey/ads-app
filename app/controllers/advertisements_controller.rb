@@ -62,6 +62,6 @@ class AdvertisementsController < ApplicationController
   private
 
   def advertisement_params
-    params.require(:advertisement).permit(:title, :description)
+    params.require(:advertisement).permit(:title, :description, files: [])
   end
 end

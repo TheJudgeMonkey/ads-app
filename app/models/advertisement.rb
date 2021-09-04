@@ -3,6 +3,8 @@
 class Advertisement < ApplicationRecord
   include AASM
 
+  has_many_attached :files
+
   belongs_to :user
 
   validates :title, presence: true

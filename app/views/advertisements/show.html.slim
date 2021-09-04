@@ -1,5 +1,12 @@
 .card
-  img.card-img-top[src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" alt="picture"]
+  - if @advertisement.files.any?
+    - @advertisement.files.each do |file|
+      - if file.variable?
+        = image_tag file.variant(resize: "800x800")
+      - elsif file.previewable?
+        = image_tag file.preview(resize: "400x400"), rails_blob_path(file, disposition: :attachment)
+      - else
+        = link_to file.filename, rails_blob_path(file, disposition: :attachment)
   .card-body
     h5.card-title
       = @advertisement.title

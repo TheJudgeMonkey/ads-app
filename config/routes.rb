@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   root to: 'advertisements#index'
 
-  resources :advertisements
+  resources :advertisements do
+    scope module: 'advertisements' do
+      resources :delete_file, only: %i[destroy]
+    end
+  end
+
   resources :users
 end
