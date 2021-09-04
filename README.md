@@ -2,6 +2,18 @@
 
 # ADS-APP
 
-sudo apt-get install libmagickcore-dev libmagickwand-dev
-
 [Project on heroku](https://calm-island-92931.herokuapp.com/)
+
+## Setup for Ubuntu Linux
+
+```bash
+git clone git@github.com:TheJudgeMonkey/ads-app.git
+cd ads-app
+sudo apt-get update
+sudo apt-get install libmagickcore-dev libmagickwand-dev
+gem install bundle
+bundle
+yarn
+rails db:setup
+rails s
+```
