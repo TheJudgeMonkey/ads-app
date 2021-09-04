@@ -14,6 +14,8 @@ module AdsApp
     config.load_defaults 6.1
     # config.autoload_paths << Rails.root.join('app/presenters')
 
+    config.active_storage.replace_on_assign_to_many = false
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
