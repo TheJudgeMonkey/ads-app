@@ -2,13 +2,15 @@
   = f.input :title, input_html: { id: 'title' }, label_html: { for: 'title' }
   = f.input :description
   = f.input :draft?, as: :boolean, label: "Save as draft"
-  strong
-    | Images:
-    ul
-    - advertisement.files.each do |file|
-      li
-        = image_tag file.variant(resize: "100x100")
-        = link_to 'Remove', advertisement_delete_file_path(advertisement.id, file.id), method: :delete, data: { confirm: 'Are you sure?' }
+  - if advertisement.files.any? { |file| file.id.present? }
+    strong
+      | Images:
+      ul
+      - advertisement.files.each do |file|
+        - if file.id.present?
+          li
+            = image_tag file.variant(resize: "100x100")
+            = link_to 'Remove', advertisement_delete_file_path(advertisement.id, file.id), method: :delete, data: { confirm: 'Are you sure?' }
   .field 
     = f.label :files
     = f.file_field :files, multiple: true

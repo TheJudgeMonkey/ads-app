@@ -2,4 +2,6 @@
 
 # ADS-APP
 
+sudo apt-get install libmagickcore-dev libmagickwand-dev
+
 [Project on heroku](https://calm-island-92931.herokuapp.com/)
