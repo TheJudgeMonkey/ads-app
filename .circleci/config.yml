@@ -14,6 +14,10 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Install RMagick dependencies
+          command: apt-get install libmagickcore-dev libmagickwand-dev
+
       # Which version of bundler?
       - run:
           name: Which bundler?
