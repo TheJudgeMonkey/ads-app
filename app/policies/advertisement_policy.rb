@@ -14,10 +14,10 @@ class AdvertisementPolicy < ApplicationPolicy
   alias update? edit?
 
   def destroy?
-    user.admin? || user == record.user
+    user.present? && user.admin? || user == record.user
   end
 
   def moderate?
-    user.admin?
+    user.present? && user.admin?
   end
 end
