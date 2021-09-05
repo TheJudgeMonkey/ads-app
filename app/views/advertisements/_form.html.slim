@@ -1,6 +1,8 @@
 = simple_form_for advertisement do |f|
   = f.input :title, input_html: { id: 'title' }, label_html: { for: 'title' }
   = f.input :description
+  = f.label :category
+  = f.collection_select :category_id, Category.all, :id, :name
   = f.input :draft?, as: :boolean, label: "Save as draft"
   - if advertisement.files.any? { |file| file.id.present? }
     strong

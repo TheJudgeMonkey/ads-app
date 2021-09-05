@@ -3,12 +3,14 @@
     - advertisements.each do |advertisement|
       .col-md-4.mb-3
         .card
-          img.card-img-top[src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" alt="picture"]
+          - if advertisement.files.any?
+            = image_tag rails_blob_path(advertisement.files.first), class: "card-img-top"
           .card-body
             h5.card-title
               = advertisement.title
             p.card-text
               = advertisement.description.truncate(100)
+            = link_to "#{advertisement.category.name}", category_path(advertisement.category_id), class: "btn btn-primary"
             p.card-text
               = link_to UserPresenter.new(advertisement.user).display_name, user_path(advertisement.user.id)
             - conditional_advertisement_path = moderation ? moderations_advertisement_path(advertisement.id) : advertisement_path(advertisement.id)

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :categories
+
   namespace :moderations do
     resources :advertisements, only: %i[index show update destroy]
   end

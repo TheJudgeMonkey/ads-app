@@ -12,6 +12,7 @@
       = advertisement.title
     p.card-text
       p = advertisement.description
+      p.badge.rounded-pill.bg-secondary = advertisement.category.name
       p = link_to UserPresenter.new(advertisement.user).display_name, user_path(advertisement.user.id)
       p.text-muted
         | Status: #{advertisement.status.humanize}

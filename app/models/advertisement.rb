@@ -5,6 +5,8 @@ class Advertisement < ApplicationRecord
 
   has_many_attached :files
 
+  belongs_to :category
+
   belongs_to :user
 
   validates :title, presence: true

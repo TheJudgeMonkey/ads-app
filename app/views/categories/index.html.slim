@@ -1,0 +1,5 @@
+h1 All Categories
+
+- if policy(Advertisement).moderate?
+  = link_to 'Add new category', new_category_path, class: "btn btn-primary"
+= render 'list', categories: @categories

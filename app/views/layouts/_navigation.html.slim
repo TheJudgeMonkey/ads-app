@@ -1,6 +1,8 @@
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
   .container-fluid
+    = link_to 'Back', :back, class: "btn btn-primary"
     a.navbar-brand.fw-bold.mx-3 href="#{root_path}" ADS APP
+    a.nav-link.text-white href="#{categories_path}" Categories
     button.navbar-toggler aria-controls="navbarScroll" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarScroll" data-bs-toggle="collapse" type="button" 
       span.navbar-toggler-icon
     #navbarScroll.collapse.navbar-collapse
