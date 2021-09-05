@@ -8,6 +8,10 @@ user_one = User.create!(email: 'user@user.com', password: 'useruser', first_name
 User.create!(email: 'user2@user2.com', password: 'user2user2', first_name: 'User2', last_name: 'Userovich2',
              role: 'user')
 
+# Categories
+cars_category = Category.create!(name: 'cars'),
+                flowers_category = Category.create!(name: 'flowers')
+
 # Advertisements
 # published today
 advertisemenet_published_today = Advertisement.create!(
@@ -15,7 +19,8 @@ advertisemenet_published_today = Advertisement.create!(
   description: 'Published today',
   status: 'published',
   user: user_one,
-  published_at: DateTime.current
+  published_at: DateTime.current,
+  category: cars_category
 )
 
 # published 5 days ago
@@ -24,7 +29,8 @@ Advertisement.create!(
   description: 'Published 5 days ago',
   status: 'published',
   user: user_one,
-  published_at: 5.days.ago
+  published_at: 5.days.ago,
+  category: cars_category
 )
 
 # archived
@@ -32,7 +38,8 @@ Advertisement.create!(
   title: 'Archived',
   description: 'Archived',
   status: 'archived',
-  user: user_one
+  user: user_one,
+  category: cars_category
 )
 
 # draft
@@ -40,7 +47,8 @@ advertisement_draft = Advertisement.create!(
   title: 'Draft',
   description: 'Draft',
   status: 'draft',
-  user: user_one
+  user: user_one,
+  category: flowers_category
 )
 
 # pending preview
@@ -48,13 +56,15 @@ pending_preview = Advertisement.create!(
   title: 'Pending preview',
   description: 'Pending preview',
   status: 'pending_review',
-  user: user_one
+  user: user_one,
+  category: flowers_category
 )
 Advertisement.create!(
   title: 'Pending preview2',
   description: 'Pending preview2',
   status: 'pending_review',
-  user: user_one
+  user: user_one,
+  category: flowers_category
 )
 
 # approved
@@ -62,7 +72,8 @@ Advertisement.create!(
   title: 'Approved',
   description: 'Approved',
   status: 'approved',
-  user: user_one
+  user: user_one,
+  category: flowers_category
 )
 
 # rejected
@@ -70,7 +81,8 @@ Advertisement.create!(
   title: 'Rejected',
   description: 'Rejected',
   status: 'rejected',
-  user: user_one
+  user: user_one,
+  category: flowers_category
 )
 
 # Pictures
