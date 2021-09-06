@@ -2,20 +2,21 @@
 
 class AdvertisementPolicy < ApplicationPolicy
   def new?
-    user.present?
+    user.present? && !user.admin?
   end
   alias create? new?
 
   def edit?
-    user.admin? ||
+    !user.admin? &&
       user == record.user &&
-        record.status.in?(%w[draft pending_review])
+      record.status.in?(%w[draft pending_review])
   end
   alias update? edit?
+  alias destroy? edit?
 
-  def destroy?
-    user.present? && user.admin? || user == record.user
-  end
+  # def destroy?
+  #   user.present? && user.admin? || user == record.user
+  # end
 
   def moderate?
     user.present? && user.admin?

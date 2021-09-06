@@ -16,8 +16,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
               ul.dropdown-menu.dropdown-menu-end aria-labelledby="navbarScrollingDropdown" 
                 li
                   a.dropdown-item href="#{user_path(current_user.id)}" = t('navigation.profile')
-                li
-                  a.dropdown-item href="#{new_advertisement_path}" = t('navigation.create_new_ad')
+                - if policy(Advertisement).new?
+                  li
+                    a.dropdown-item href="#{new_advertisement_path}" = t('navigation.create_new_ad')
                 - if policy(Advertisement).moderate?
                   li
                     a.dropdown-item href="#{moderations_advertisements_path}" = t('navigation.ads_for_moderation')
