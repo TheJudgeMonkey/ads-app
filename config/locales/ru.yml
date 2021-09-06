@@ -51,3 +51,21 @@ ru:
       last: "Последняя &raquo;"
       next: "Следующая &rsaquo;"
       previous: "&lsaquo; Предыдущая"
+  categories:
+    create:
+      notice: "Категория была успешно создана."
+    update:
+      notice: "Категория была успешно обновлена."
+    destroy:
+      notice: "Категория была успешно удалена."
+  advertisements:
+    create:
+      notice: "Объявление было успешно создано."
+    update:
+      notice: "Объявление было успешно обновлено."
+    destroy:
+      notice: "Объявление было успешно удалено."
+  alert: "У вас нет доступа для данного действия."
+  users:
+    update:
+      notice: "Аккаунт успешно обновлен."

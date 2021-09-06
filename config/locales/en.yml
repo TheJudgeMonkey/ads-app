@@ -82,3 +82,21 @@ en:
       last: Last &raquo;
       next: Next &rsaquo;
       previous: "&lsaquo; Prev"
+  categories:
+    create:
+      notice: "Category was successfully created."
+    update:
+      notice: "Category was successfully updated."
+    destroy:
+      notice: "Category was successfully destroyed."
+  advertisements:
+    create:
+      notice: "Advertisement was successfully created."
+    update:
+      notice: "Advertisement was successfully updated."
+    destroy:
+      notice: "Advertisementwas successfully destroyed."
+  alert: "You are not authorized to perform this action."
+  users:
+    update:
+      notice: "Account was successfully updated."
