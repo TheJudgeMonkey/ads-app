@@ -11,6 +11,8 @@ jobs:
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
+      - image: circleci/postgres:12.8
+
     steps:
       - checkout
 
