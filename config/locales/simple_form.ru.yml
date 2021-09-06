@@ -10,6 +10,7 @@ ru:
         submit: "Подтвердить"
       category:
         name: "Название"
+        submit: "Подтвердить"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
