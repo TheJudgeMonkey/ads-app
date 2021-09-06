@@ -12,6 +12,10 @@ jobs:
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
       - image: circleci/postgres:12.8
+        environment:
+          POSTGRES_USER: ads-app
+          POSTGRES_DB: ads-app_test
+          POSTGRES_PASSWORD: ""
 
     steps:
       - checkout
