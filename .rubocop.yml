@@ -15,6 +15,7 @@ Rails/FilePath:
 Metrics/BlockLength:
   Exclude:
     - config/**/*
+    - spec/**/*
 
 Layout/LineLength:
   Exclude:
