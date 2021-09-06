@@ -16,8 +16,6 @@ jobs:
 
       - run: sudo apt install -y postgresql-client || true
 
-      - run: bundle exec rails db:setup
-
       - run:
           name: Install RMagick dependencies
           command: sudo apt-get update && sudo apt-get install libmagickcore-dev libmagickwand-dev
@@ -30,6 +28,8 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install
+
+      - run: bundle exec rails db:setup
 
       # Run rspec
       - run:
