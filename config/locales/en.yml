@@ -51,7 +51,13 @@ en:
     archive: "Archive"
     approve: "Approve"
     reject: "Reject"
+    search_and_sort: "Search and Sort"
+    title: "Title"
+    description: "Description"
+    ransack:
+      search: "Search"
   category:
+    category: "Category"
     new_category: "New Category"
     all_categories: "All Categories"
     add_new_category: "Add new Category"
@@ -70,3 +76,9 @@ en:
     first_name: "First name:"
     last_name: "Last name:"
     edit: "Edit"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      next: Next &rsaquo;
+      previous: "&lsaquo; Prev"
