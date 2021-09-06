@@ -1,5 +1,5 @@
-h1 All Categories
+h1 = t('category.all_categories')
 
 - if policy(Advertisement).moderate?
-  = link_to 'Add new category', new_category_path, class: "btn btn-primary"
+  = link_to t('category.add_new_category'), new_category_path, class: "btn btn-primary"
 = render 'list', categories: @categories

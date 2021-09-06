@@ -1,29 +1,28 @@
 .row.justify-content-center
   .col-lg-4.col-md-6.ml-auto.mr-auto
     h1.text-center
-      | Account
+      = t('.account')
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = render partial: 'devise/shared/error_messages', resource: resource
       .mb-3
-        = f.email_field :email, class: 'form-control', placeholder: 'Email Address'
+        = f.email_field :email, class: 'form-control', placeholder: t('devise.form.placeholder.email')
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         .alert.alert-warning
-          | Currently waiting confirmation for: 
-          = resource.unconfirmed_email
+          = t('.currently_waiting_confirmation_for_email', email: resource.unconfirmed_email)
       .mb-3
-        = f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password'
+        = f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t('devise.form.placeholder.password')
       p.form-text.text-muted
       small
-        | Leave password blank if you don't want to change it
+        = t('.leave_blank_if_you_don_t_want_to_change_it')
       .mb-3
-        = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password'
+        = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: t('devise.form.placeholder.confirm_password')
       .mb-3
-        = f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: 'Current Password'
+        = f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: t('devise.form.placeholder.confirm_password')
         p.form-text.text-muted
           small
-            | We need your current password to confirm your changes
+            = t('.we_need_your_current_password_to_confirm_your_changes')
       .mb-3.d-grid
-        = f.submit "Save Changes", class: 'btn btn-lg btn-primary'
+        = f.submit t('.update', :default => "Update"), class: 'btn btn-lg btn-primary'
   hr
   p.text-center
-    = link_to "Deactivate my account", registration_path(resource_name), data: { confirm: "Are you sure? You cannot undo this." }, method: :delete
+    = link_to t('.cancel_my_account', :default => "Cancel my account"), registration_path(resource_name), data: { confirm: "Are you sure? You cannot undo this." }, method: :delete

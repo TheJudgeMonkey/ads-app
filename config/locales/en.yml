@@ -30,4 +30,43 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navigation:
+    back: "Back"
+    categories: "Categories"
+    profile: "Profile"
+    create_new_ad: "Create new ad"
+    ads_for_moderation: "Ads for moderation"
+    logout: "Logout"
+    login: "Login"
+    sign_up: "Sign up"
+  advertisement:
+    read_more: "Read more"
+    new_advertisement: "New Advertisement"
+    save_as_draft: "Save as draft"
+    edit_advertisement: "Edit Advertisement"
+    status: "Status:"
+    created_at: "Created at:"
+    updated_at: "Updated at:"
+    edit: "Edit"
+    archive: "Archive"
+    approve: "Approve"
+    reject: "Reject"
+  category:
+    new_category: "New Category"
+    all_categories: "All Categories"
+    add_new_category: "Add new Category"
+    edit_category: "Edit Category"
+    list:
+      name: "Name"
+      created_at: "Created at"
+      updated_at: "Updated at"
+      update: "Update"
+      remove: "Remove"
+  user:
+    edit_profile: "Edit Profile"
+    change_your_password: "Change your password"
+    profile: "Profile"
+    email: "email:"
+    first_name: "First name:"
+    last_name: "Last name:"
+    edit: "Edit"

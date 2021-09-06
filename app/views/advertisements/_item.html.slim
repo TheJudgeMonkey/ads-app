@@ -15,19 +15,22 @@
       p.badge.rounded-pill.bg-secondary = advertisement.category.name
       p = link_to UserPresenter.new(advertisement.user).display_name, user_path(advertisement.user.id)
       p.text-muted
-        | Status: #{advertisement.status.humanize}
+        = t('advertisement.status')
+        |  #{advertisement.status.humanize}
       p.text-muted
-        | Created at: #{advertisement.created_at}
+        = t('advertisement.created_at')
+        |  #{advertisement.created_at}
       p.text-muted
-        | Updated at: #{advertisement.updated_at}
+        = t('advertisement.updated_at')
+        |  #{advertisement.updated_at}
       
     - if policy(advertisement).destroy?
       a.btn.btn-outline-primary.me-2[href="#{edit_advertisement_path(advertisement.id)}"]
-        | Edit
+        = t('advertisement.edit')
 
     - if policy(advertisement).destroy?
-      = link_to "Archive", advertisement_path(advertisement.id), method: :delete, class: "btn btn-outline-danger me-2", data: { confirm: 'Are you sure?' }
+      = link_to t('advertisement.archive'), advertisement_path(advertisement.id), method: :delete, class: "btn btn-outline-danger me-2", data: { confirm: 'Are you sure?' }
     
     - if policy(advertisement).moderate? && advertisement.pending_review?
-      = link_to "Approve", moderations_advertisement_path(advertisement.id), class: "btn btn-outline-success me-2", method: :patch
-      = link_to "Reject", moderations_advertisement_path(advertisement.id), class: "btn btn-outline-danger me-2", method: :delete
+      = link_to t('advertisement.approve'), moderations_advertisement_path(advertisement.id), class: "btn btn-outline-success me-2", method: :patch
+      = link_to t('advertisement.reject'), moderations_advertisement_path(advertisement.id), class: "btn btn-outline-danger me-2", method: :delete

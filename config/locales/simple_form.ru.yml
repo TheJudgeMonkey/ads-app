@@ -1,0 +1,18 @@
+ru:
+  simple_form:
+    labels:
+      advertisement:
+        title: "Заголовок"
+        description: "Описание"
+        category: "Категория"
+        draft?: "Сохранить в черновик?"
+        files: "Файлы"
+        submit: "Подтвердить"
+      category:
+        name: "Название"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        submit: "Подтвердить"
+  images: "Изображения"
+  remove: "Удалить"

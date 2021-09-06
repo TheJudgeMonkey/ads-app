@@ -1,18 +1,18 @@
 .row.justify-content-center.p-5
   .col-lg-4.col-md-6.ml-auto.mr-auto
     h1.text-center
-      | Log in
+      = t('devise.sessions.new.login')
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .mb-3
-        = f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control'
+        = f.email_field :email, autofocus: true, placeholder: t('devise.form.placeholder.email'), class: 'form-control'
       .mb-3
-        = f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control'
+        = f.password_field :password, autocomplete: "off", placeholder: t('devise.form.placeholder.password'), class: 'form-control'
       - if devise_mapping.rememberable?
         .form-check
           label.form-check-label
             = f.check_box :remember_me, class: "form-check-input"
-            |  Remember me 
+            =  t('devise.sessions.new.remember_me')
       .mb-3.d-grid
-        = f.submit "Log in", class: "btn btn-primary btn-lg"
+        = f.submit t('devise.sessions.new.login'), class: "btn btn-primary btn-lg"
     .text-center
       = render "devise/shared/links"

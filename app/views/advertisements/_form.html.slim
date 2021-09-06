@@ -3,20 +3,20 @@
   = f.input :description
   = f.label :category
   = f.collection_select :category_id, Category.all, :id, :name
-  = f.input :draft?, as: :boolean, label: "Save as draft"
+  = f.input :draft?, as: :boolean
   - if advertisement.files.any? { |file| file.id.present? }
     strong
-      | Images:
+      = t('images')
       ul
       - advertisement.files.each do |file|
         - if file.id.present?
           li
             = image_tag file.variant(resize: "100x100")
-            = link_to 'Remove', advertisement_delete_file_path(advertisement.id, file.id), method: :delete, data: { confirm: 'Are you sure?' }
+            = link_to t('remove'), advertisement_delete_file_path(advertisement.id, file.id), method: :delete, data: { confirm: 'Are you sure?' }
   .field 
     = f.label :files
     = f.file_field :files, multiple: true
   #preview
-  = f.button :submit, class: "btn btn-primary"
+  = f.submit t('simple_form.labels.advertisement.submit'), class: "btn btn-primary"
 
 = javascript_pack_tag 'uploader_preview', 'data-turbolinks-track': 'reload'

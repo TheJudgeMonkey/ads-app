@@ -3,14 +3,14 @@
     thead
       tr
         th[scope="col"]
-          | Name
+          = t('category.list.name')
         - if policy(Advertisement).moderate?
           th[scope="col"]
-            | Id
+            | id
           th[scope="col"]
-            | Created at
+            = t('category.list.created_at')
           th[scope="col"]
-            | Updated at
+            = t('category.list.updated_at')
           th[scope="col"]
             |
           th[scope="col"]
@@ -28,6 +28,6 @@
           td
             = category.updated_at
           td
-            = link_to "Update", edit_category_path(category.id), class: "btn btn-outline-warning"
+            = link_to t('category.list.update'), edit_category_path(category.id), class: "btn btn-outline-warning"
           td
-            = link_to "Remove", category_path(category.id), method: :delete, class: "btn btn-outline-danger", data: { confirm: 'Are you sure?' }
+            = link_to t('category.list.remove'), category_path(category.id), method: :delete, class: "btn btn-outline-danger", data: { confirm: 'Are you sure?' }

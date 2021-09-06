@@ -1,6 +1,8 @@
-h1 Edit Profile #{@user.email}
+h1 = t('user.edit_profile') 
+p
+  | #{@user.email}
 
 = render "form", user: @user
 
 - if policy(@user).password_change?
-  = link_to "Change your password", edit_user_registration_path 
+  = link_to t('user.change_your_password'), edit_user_registration_path 

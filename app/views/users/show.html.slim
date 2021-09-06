@@ -1,13 +1,16 @@
-h1 Profile 
+h1 = t('user.profile')
 p 
-  | Email: #{@user.email}
+  = t('user.email')
+  |  #{@user.email}
 p 
-  | First name: #{@user.first_name}
+  = t('user.first_name')
+  |  #{@user.first_name}
 p 
-  | Last name: #{@user.last_name}
+  = t('user.last_name')
+  |  #{@user.last_name}
 
 - if policy(@user).edit?
   p 
-    = link_to 'Edit', edit_user_path(@user.id), class: 'btn btn-outline-primary'
+    = link_to t('user.edit'), edit_user_path(@user.id), class: 'btn btn-outline-primary'
 
 = render 'advertisements/list', advertisements: @advertisements, moderation: false
