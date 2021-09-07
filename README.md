@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/TheJudgeMonkey/ads-app/tree/main.svg?style=svg)](https://circleci.com/gh/TheJudgeMonkey/ads-app/tree/main) [![Heroku](https://pyheroku-badge.herokuapp.com/?app=calm-island-92931&style=<STYLE>)](https://calm-island-92931.herokuapp.com/)
+[![CircleCI](https://circleci.com/gh/TheJudgeMonkey/ads-app/tree/main.svg?style=svg)](https://circleci.com/gh/TheJudgeMonkey/ads-app/tree/main) [![Heroku](https://pyheroku-badge.herokuapp.com/?app=my-ads-app&style=<STYLE>)](https://my-ads-app.herokuapp.com/)
 
 # ADS-APP
 
-[Project on heroku](https://calm-island-92931.herokuapp.com/)
+[Project on heroku](https://my-ads-app.herokuapp.com/)
 
 ## Setup 
 
