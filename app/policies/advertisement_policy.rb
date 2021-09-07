@@ -7,8 +7,7 @@ class AdvertisementPolicy < ApplicationPolicy
   alias create? new?
 
   def edit?
-    !user.admin? &&
-      user == record.user &&
+    user == record.user &&
       record.status.in?(%w[draft pending_review])
   end
   alias update? edit?
