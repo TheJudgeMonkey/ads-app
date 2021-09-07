@@ -21,11 +21,11 @@
                 li.list-group-item
                   = f.submit
 .row.justify-content-center.text-center.mb-2.mt-2
-  .col-2
+  .col-2.me-1
       = sort_link(@q, :title, t('advertisement.title'))
-  .col-2
+  .col-2.me-4
       = sort_link(@q, :description, t('advertisement.description')) 
-  .col-2
+  .col-2.ms-2
       = sort_link(@q, :category_name, t('category.category')) 
 
 = render 'list', advertisements: @advertisements, moderation: false
