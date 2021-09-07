@@ -51,7 +51,7 @@ en:
     archive: "Archive"
     approve: "Approve"
     reject: "Reject"
-    search_and_sort: "Search and Sort"
+    search: "Search"
     title: "Title"
     description: "Description"
     ransack:

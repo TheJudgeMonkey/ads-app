@@ -20,7 +20,7 @@ ru:
     archive: "Добавить в архив"
     approve: "Одобрить"
     reject: "Отклонить"
-    search_and_sort: "Поиск и Сортировка"
+    search: "Поиск"
     title: "Заголовок"
     description: "Описание"
     ransack:
