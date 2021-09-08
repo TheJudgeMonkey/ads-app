@@ -15,5 +15,6 @@ ru:
         first_name: "Имя"
         last_name: "Фамилия"
         submit: "Подтвердить"
+        admin?: "Изменть на админа?"
   images: "Изображения"
   remove: "Удалить"

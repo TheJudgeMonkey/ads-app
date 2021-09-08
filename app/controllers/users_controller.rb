@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 
     authorize @user
 
+    @user.role = params[:user][:admin] == '1' ? :admin : :user
+
     if @user.update(user_params)
       redirect_to user_path(@user.id), notice: t('.notice')
     else

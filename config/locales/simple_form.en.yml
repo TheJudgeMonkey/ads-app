@@ -15,5 +15,6 @@ en:
         first_name: "First name"
         last_name: "Last name"
         submit: "Submit"
+        admin?: "Change to admin?"
   images: "Images"
   remove: "Remove"
