@@ -1,0 +1,25 @@
+h1 = t("user.all_users")
+
+.container
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th[scope="col"]
+          = t("user.email")
+        th[scope="col"]
+          = t("user.first_name")
+        th[scope="col"]
+          = t("user.last_name")
+        th[scope="col"]
+          = t("user.role")
+    tbody
+    - @users.each do |user|
+      tr
+        th[scope="row"]
+          = link_to "#{user.email}", user_path(user.id)
+        td      
+          = user.first_name          
+        td
+          = user.last_name
+        td
+          = user.role

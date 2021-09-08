@@ -46,6 +46,8 @@ ru:
     last_name: "Фамилия:"
     edit: "Редактировать"
     destroy: "Удалить"
+    all_users: "Все пользователи"
+    role: "Роль"
   views:
     pagination:
       first: "&laquo; Первая"

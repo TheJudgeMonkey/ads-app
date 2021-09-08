@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+    authorize @users
+  end
+
   def show
     @user = User.find(params[:id])
     @advertisements = @user.advertisements.pagination(params[:page])

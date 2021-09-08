@@ -22,6 +22,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.bg-gradient
                 - if policy(Advertisement).moderate?
                   li
                     a.dropdown-item href="#{moderations_advertisements_path}" = t('navigation.ads_for_moderation')
+                  li
+                    a.dropdown-item href="#{users_path}" = t('user.all_users')
                 li
                   hr.dropdown-divider
                 li
