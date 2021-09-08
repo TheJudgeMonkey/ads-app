@@ -76,6 +76,7 @@ en:
     first_name: "First name:"
     last_name: "Last name:"
     edit: "Edit"
+    destroy: "Destroy"
   views:
     pagination:
       first: "&laquo; First"
@@ -100,3 +101,5 @@ en:
   users:
     update:
       notice: "Account was successfully updated."
+    destroy:
+      notice: "Account was successfully destroyed."

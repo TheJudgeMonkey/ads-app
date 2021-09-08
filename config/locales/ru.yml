@@ -45,6 +45,7 @@ ru:
     first_name: "Имя:"
     last_name: "Фамилия:"
     edit: "Редактировать"
+    destroy: "Удалить"
   views:
     pagination:
       first: "&laquo; Первая"
@@ -69,3 +70,5 @@ ru:
   users:
     update:
       notice: "Аккаунт успешно обновлен."
+    destroy:
+      notice: "Аккаунт успешно удален"

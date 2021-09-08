@@ -2,6 +2,9 @@ h1 = t('user.edit_profile')
 p
   | #{@user.email}
 
+- if policy(@user).destroy?
+  = link_to t('user.destroy'), user_path(@user.id), method: :delete, class: "btn btn-danger mb-2", data: { confirm: 'Are you sure?' }
+
 = render "form", user: @user
 
 - if policy(@user).password_change?

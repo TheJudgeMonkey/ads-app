@@ -27,7 +27,7 @@
     - if policy(advertisement).edit?
       a.btn.btn-outline-primary.me-2[href="#{edit_advertisement_path(advertisement.id)}"]
         = t('advertisement.edit')
-    - if policy(advertisement).destroy?
+    - if policy(advertisement).destroy? && advertisement.published?
       = link_to t('advertisement.destroy'), advertisement_path(advertisement.id), method: :delete, class: "btn btn-outline-danger me-2", data: { confirm: 'Are you sure?' }
     
     - if policy(advertisement).moderate? && advertisement.pending_review?

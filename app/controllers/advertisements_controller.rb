@@ -51,11 +51,11 @@ class AdvertisementsController < ApplicationController
   end
 
   def destroy
-    advertisement = Advertisement.find(params[:id])
+    @advertisement = Advertisement.find(params[:id])
 
-    authorize advertisement
+    authorize @advertisement
 
-    advertisement.destroy
+    @advertisement.destroy
 
     redirect_to advertisements_path, notice: t('.notice')
   end
