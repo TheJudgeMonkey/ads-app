@@ -17,7 +17,7 @@ ru:
     created_at: "Создано:"
     updated_at: "Обновлено:"
     edit: "Редактировать"
-    archive: "Добавить в архив"
+    destroy: "Удалить"
     approve: "Одобрить"
     reject: "Отклонить"
     search: "Поиск"

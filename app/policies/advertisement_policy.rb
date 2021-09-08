@@ -8,10 +8,15 @@ class AdvertisementPolicy < ApplicationPolicy
 
   def edit?
     user == record.user &&
-      record.status.in?(%w[draft pending_review])
+      record.status.in?(%w[draft rejected archived])
   end
   alias update? edit?
-  alias destroy? edit?
+
+  def destroy?
+    user.admin? &&
+      record.status.in?(%w[published]) ||
+      user == record.user
+  end
 
   def moderate?
     user.present? && user.admin?

@@ -48,7 +48,7 @@ en:
     created_at: "Created at:"
     updated_at: "Updated at:"
     edit: "Edit"
-    archive: "Archive"
+    destroy: "Destroy"
     approve: "Approve"
     reject: "Reject"
     search: "Search"

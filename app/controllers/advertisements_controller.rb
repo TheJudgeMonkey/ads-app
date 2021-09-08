@@ -55,7 +55,7 @@ class AdvertisementsController < ApplicationController
 
     authorize advertisement
 
-    advertisement.archive!
+    advertisement.destroy
 
     redirect_to advertisements_path, notice: t('.notice')
   end
