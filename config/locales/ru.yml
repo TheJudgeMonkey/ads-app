@@ -55,12 +55,13 @@ ru:
       next: "Следующая &rsaquo;"
       previous: "&lsaquo; Предыдущая"
   categories:
-    create:
+    create: 
       notice: "Категория была успешно создана."
     update:
       notice: "Категория была успешно обновлена."
     destroy:
       notice: "Категория была успешно удалена."
+      alert: "Невозможно удалить, в данной категории есть объявления."
   advertisements:
     create:
       notice: "Объявление было успешно создано."

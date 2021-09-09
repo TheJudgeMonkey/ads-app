@@ -3,10 +3,12 @@ ru:
     attributes:
       user:
         current_password: "Текущий пароль"
-        email: 
+        email: "Эл.почта"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
         remember_me: "Запомнить меня"
+      category:
+        name: "Название"
     models:
       user: "Пользователь"
   devise:

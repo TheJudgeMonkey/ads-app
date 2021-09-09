@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    authorize @user
+    params[:user][:role] = params.dig(:user, :admin) == '1' ? :admin : :user
 
-    @user.role = params[:user][:admin] == '1' ? :admin : :user
+    authorize @user
 
     if @user.update(user_params)
       redirect_to user_path(@user.id), notice: t('.notice')
@@ -43,6 +43,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :password, :password_confirmation)
+    params.require(:user).permit(policy(@user).permitted_attributes)
   end
 end

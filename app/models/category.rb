@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Category < ApplicationRecord
-  has_many :advertisements, dependent: :destroy
+  has_many :advertisements, dependent: :restrict_with_exception
 
   validates :name, presence: true
 end

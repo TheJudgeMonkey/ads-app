@@ -86,11 +86,14 @@ en:
       previous: "&lsaquo; Prev"
   categories:
     create:
-      notice: "Category was successfully created."
+      notice:
+        created: "Category was successfully created."
+        is_used: "This name is already used"
     update:
       notice: "Category was successfully updated."
     destroy:
       notice: "Category was successfully destroyed."
+      alert: "You can not destroy category which not empty."
   advertisements:
     create:
       notice: "Advertisement was successfully created."

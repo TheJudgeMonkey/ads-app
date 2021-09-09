@@ -14,4 +14,12 @@ class UserPolicy < ApplicationPolicy
   def password_change?
     user == record
   end
+
+  def permitted_attributes
+    if user.admin?
+      %i[first_name last_name password password_confirmation role]
+    elsif user == record
+      %i[first_name last_name password password_confirmation]
+    end
+  end
 end

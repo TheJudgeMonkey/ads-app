@@ -47,9 +47,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     authorize @category
 
-    @category.destroy
-
+    @category.destroy!
     redirect_to categories_path, notice: t('.notice')
+  rescue ActiveRecord::DeleteRestrictionError
+    redirect_to categories_path, alert: t('.alert')
   end
 
   private
