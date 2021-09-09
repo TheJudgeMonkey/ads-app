@@ -3,5 +3,5 @@
 class Category < ApplicationRecord
   has_many :advertisements, dependent: :restrict_with_exception
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
