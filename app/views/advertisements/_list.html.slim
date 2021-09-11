@@ -4,7 +4,7 @@
       .col-md-4.mb-3
         .card
           - if advertisement.files.any?
-            = cl_image_tag advertisement.files.first.key, width: 100, crop: "fill", class: "card-img-top"
+            = cl_image_tag advertisement.files.first.key, width: 400, crop: "fill", class: "card-img-top"
           .card-body
             h5.card-title
               = advertisement.title

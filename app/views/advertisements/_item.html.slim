@@ -1,7 +1,7 @@
 .card
   - if advertisement.files.any?
     - advertisement.files.each do |file|
-      = cl_image_tag file.key, width: 100, crop: "fill"
+      = cl_image_tag file.key, width: 1000, crop: "fill", class: "card-img-top mb-1"
   .card-body
     h5.card-title
       = advertisement.title
