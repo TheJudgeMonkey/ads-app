@@ -9,8 +9,8 @@ User.create!(email: 'user2@user2.com', password: 'user2user2', first_name: 'User
              role: 'user')
 
 # Categories
-cars_category = Category.create!(name: 'cars'),
-                flowers_category = Category.create!(name: 'flowers')
+cars_category = Category.create!(name: 'cars')
+flowers_category = Category.create!(name: 'flowers')
 
 # Advertisements
 # published today
