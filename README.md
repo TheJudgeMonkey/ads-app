@@ -12,6 +12,8 @@
 - PostgreSQL 12.8.0
 - redis 5.0.7
 
+You will need RAILS_MASTER_KEY to use cloudinary, please contact me to get it. Otherwise, it's not going to work. 
+
 
 ### For all systems
 
@@ -21,8 +23,8 @@ cd ads-app
 gem install bundler:2.2.26
 bundle
 yarn
-rails db:setup
-rails s
+bundle exec rails db:setup
+bundle exec rails s
 ```
 
 ## Cron jobs
