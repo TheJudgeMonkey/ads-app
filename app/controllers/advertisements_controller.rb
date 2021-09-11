@@ -5,7 +5,7 @@ class AdvertisementsController < ApplicationController
 
   def index
     @q = Advertisement.published.ransack(params[:q])
-    @advertisements = @q.result.includes(:category).pagination(params[:page])
+    @advertisements = @q.result.includes(:category, :user, files_attachments: :blob).pagination(params[:page])
   end
 
   def show

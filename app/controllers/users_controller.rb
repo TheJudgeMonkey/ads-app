@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @advertisements = @user.advertisements.pagination(params[:page])
+    @advertisements = @user.advertisements.includes(:category, files_attachments: :blob).pagination(params[:page])
   end
 
   def edit

@@ -28,10 +28,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-
 gem 'aasm', '~> 5.2.0'
 gem 'after_commit_everywhere', '~> 1.0'
+gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bullet', '~> 6.1.5', '>= 6.1.5'
 gem 'cloudinary', '~> 1.21.0'
 gem 'devise', '~> 4.8.0'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap5'

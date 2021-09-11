@@ -9,7 +9,8 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @advertisements = @category.advertisements.published.pagination(params[:page])
+    @advertisements = @category.advertisements.includes(:user,
+                                                        files_attachments: :blob).published.pagination(params[:page])
   end
 
   def new
