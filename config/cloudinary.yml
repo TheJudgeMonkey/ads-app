@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: thejudgemonkey
+  api_key: '316649547734873'
+  api_secret: 2_CEyOky_oNU9FK9pd9ee33EUVQ
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: thejudgemonkey
+  api_key: '316649547734873'
+  api_secret: 2_CEyOky_oNU9FK9pd9ee33EUVQ
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: thejudgemonkey
+  api_key: '316649547734873'
+  api_secret: 2_CEyOky_oNU9FK9pd9ee33EUVQ
+  enhance_image_tag: true
+  static_file_support: false

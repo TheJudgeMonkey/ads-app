@@ -10,19 +10,8 @@
 - node 16.8.0
 - ruby 3.0.0
 - PostgreSQL 12.8.0
-- RMagick (see below)
 - redis 5.0.7
 
-#### RMagick for Ubuntu
-```bash
-sudo apt-get update
-sudo apt-get install libmagickcore-dev libmagickwand-dev
-```
-
-#### RMagick for Mac
-```bash
-brew install pkg-config imagemagick
-```
 
 ### For all systems
 

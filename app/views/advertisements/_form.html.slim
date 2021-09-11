@@ -11,7 +11,7 @@
       - advertisement.files.each do |file|
         - if file.id.present?
           li
-            = image_tag file.variant(resize: "100x100")
+            = cl_image_tag file.key, width: 50, crop: "fill"
             = link_to t('remove'), advertisement_delete_file_path(advertisement.id, file.id), method: :delete, data: { confirm: 'Are you sure?' }
   .field.mb-2
     = f.label :files, class: "me-2"
