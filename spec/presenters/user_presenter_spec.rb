@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-require_relative '../../app/presenters/user_presenter'
+require 'rails_helper'
 
 describe UserPresenter do
   subject(:user_presenter) { described_class.new(user) }

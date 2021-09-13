@@ -28,3 +28,12 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Exclude:
     - db/**/*
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
